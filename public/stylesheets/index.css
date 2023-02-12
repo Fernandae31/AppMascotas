@@ -1,0 +1,39 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+.cajaIndex{
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+div.banner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  width: 80vw;
+  height: 30vh;
+  background-image: url("https://images.vexels.com/content/258137/preview/dog-breed-pets-doodle-pattern-design-bb89f6.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  font-size: 70px;
+}
+
+.tarjetas{
+  padding-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px 10px;
+}
+
+.card{
+margin: 0px 30px;
+box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
