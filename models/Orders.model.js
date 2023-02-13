@@ -2,15 +2,16 @@ const { Schema, model } = require("mongoose");
 
 const orderSchema = new Schema(
     {
-      dateOfPurchase: {
-        type: Date,
-        required: false,
-      },
-      paymentMethod: pMehtod,
+      paymentMethod:{type: Schema.Types.ObjectId, ref:"PaymentMethod"},
       status: {
-        enum: ["por enviar", "en camino", "entregado"]
+        type: String,
+        enum: ["por enviar", "en camino", "entregado"],
+        default: "por enviar"
       },
       products: [{type: Schema.Types.ObjectId, ref:"Product"}]
+    },
+    {
+      timestamps: true,
     }
 )
 

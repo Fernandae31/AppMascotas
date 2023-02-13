@@ -8,6 +8,7 @@ const productSchema = new Schema(
     },
     price: {
       type: Number,
+      required: true,
     },
     description: {
       type: String,
@@ -15,7 +16,7 @@ const productSchema = new Schema(
     },
     quantity: {
       type: Number,
-      require:true,
+      required:true,
     },
     keyNumber: {
       type: String,
@@ -25,8 +26,15 @@ const productSchema = new Schema(
         type: [String]
     },
 
-    category: [{ type: Schema.Types.ObjectId, ref: "Pet"}],
-    
+    category: {
+      type:String,
+      enum:["food", "toys", "accesories", "transportation"]
+    },
+
+    target: {
+      type:String,
+      enum:["dog", "cat", "both"]
+    }
   },
 
 );

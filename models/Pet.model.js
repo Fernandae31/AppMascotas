@@ -8,17 +8,23 @@ const petSchema = new Schema(
         trim: true,
       },
       age: {
-        type: Number,
-        require:false,
+        type: Date,
+        required:false,
       },
       photo: {
         type:String,
+        default: ""
       },
-      breed: {
+      specie: {
         type: String,
-        required: true
+        required: true,
+        enum: ["dog", "cat"]
       },
+    },
+    {
+      timestamps:true,
     }
+
 )
 
 const Pet = model("Pet", petSchema);
