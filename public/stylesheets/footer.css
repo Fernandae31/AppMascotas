@@ -1,4 +1,11 @@
+
 .footer-seccion{
+    bottom: 0;
+    position: relative;
+
+}
+
+.footerCompleto{
     padding: 1rem 0 1rem 0;
     display: flex;
     flex-direction: column;
@@ -8,6 +15,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 1rem;
+    width: 100vw;
 }
 .contenedor-footer{
     padding-top: 15px;
@@ -18,10 +26,7 @@
     padding: 16px;
     margin: 15px;
 }
-footer{
-    padding: 30px;
 
-}
 h1{
     text-align: center;
 }

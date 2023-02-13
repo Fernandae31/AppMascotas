@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+}
+.bodyProfile {
+    font-family: Arial;
+    overflow: hidden;
+}
+
+/* Sidenav */
+.sidenav {
+    height: 40%;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+    position: absolute;
+    width: 250px;
+}
+
+/* MainProfile */
+
+.profile {
+    margin-bottom: 20px;
+    margin-top: 50px;
+    text-align: center;
+    display: flex;
+   flex-direction: column;
+    align-items: center;
+}
+
+.profile img {
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px 1px grey;
+}
+
+.name {
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+
+.mainProfile {
+    margin-top: 2%;
+    margin-left: 29%;
+    font-size: 28px;
+    padding: 0 10px;
+    width: 60%;
+}
+
+.mainProfile h2 {
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.mainProfile .card {
+    background-color: #fff;
+    border-radius: 18px;
+    box-shadow: 1px 1px 8px 0 grey;
+    height: auto;
+    margin-bottom: 20px;
+    padding: 20px 0 20px 50px;
+}
+
+.mainProfile .card table {
+    border: none;
+    font-size: 16px;
+    height: 270px;
+    width: 80%;
+}
+
+
+
