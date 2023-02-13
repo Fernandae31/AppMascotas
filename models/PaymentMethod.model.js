@@ -19,10 +19,10 @@ const pMethodSchema = new Schema(
         type: Number,
         required: true
       },
-      issuingBank: [{type: Schema.Types.ObjectId, ref:"Bank"}]
+      issuingBank:{type: Schema.Types.ObjectId, ref:"Bank"}
     }
 )
 
-const pMehtod = model("pMehtod", pMethodSchema);
+const pMehtod = model("PaymentMethod", pMethodSchema);
 
 module.exports = pMehtod;

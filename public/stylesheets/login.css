@@ -1,7 +1,8 @@
-#form-login{
-    width: 100vw;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-    
+#form{
+width: 100vw;
+display: flex;
+justify-content: center;
+align-items: center;
+padding-top: 35px;
+padding-bottom: 35px;
 }

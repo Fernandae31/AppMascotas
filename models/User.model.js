@@ -34,13 +34,19 @@ const userSchema = new Schema(
       type:String,
       required:true,
     },
-    metodosPago: [{ type: Schema.Types.ObjectId, ref: "MetodoPago"}],
+    metodosPago: [{ type: Schema.Types.ObjectId, ref: "PaymentMethod"}],
 
-    mascotas: [{ type: Schema.Types.ObjectId, ref: "Pet" }],
+    mascotas: [{ type: Schema.Types.ObjectId, ref: "Pet"}],
 
     pedidos: [{type: Schema.Types.ObjectId, ref: "Pedido"}],
 
-    productos: [{type: Schema.Types.ObjectId, ref: "Producto"}]
+    productos: [{type: Schema.Types.ObjectId, ref: "Producto"}],
+
+    rol: {
+      type:String,
+      enum: ["client", "admin"],
+      default: "client",
+    }
     
   },
   {
