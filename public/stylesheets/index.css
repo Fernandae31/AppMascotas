@@ -10,7 +10,7 @@
   flex-direction: column;
   justify-content: space-between;
   background-image: url(../images/pawfondo.jpg);
-  background-position: center center;
+ 
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 1rem;
@@ -32,17 +32,17 @@
     font-size: 15px;
     text-decoration: none;
   }
-.contenedor-seccion{
-  background-image: url(../images/fondoHeader.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  width: 100vw;
-  height: 35vh;
-  overflow: hidden;
-  display: block;
- 
-}
+  .contenedor-seccion{
+    background-image: url(../images/fondoHeader.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 35vh;
+    display: block;
+    position: fixed;
+  }
 .contenedor-header{
   display: flex;
   flex-direction: column;
