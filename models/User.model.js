@@ -25,29 +25,29 @@ const userSchema = new Schema(
     },
     photo: {
       type:String,
+      default: "https://s1.qwant.com/thumbr/474x474/b/d/abcd7d626c46523120741bf4795830dbb0f780511c292b059a80411ccc59ff/th.jpg?u=https%3A%2F%2Ftse.mm.bing.net%2Fth%3Fid%3DOIP.3-rUE4SORzLoGxaLp7KvLAHaHa%26pid%3DApi&q=0&b=1&p=0&a=0",
     },
-    direction: {
+    address: {
       type: String,
       required: true
     },
-    telephone: {
+    phone: {
       type:String,
       required:true,
     },
-    metodosPago: [{ type: Schema.Types.ObjectId, ref: "PaymentMethod"}],
+    // PaymentMethod: [{ type: Schema.Types.ObjectId, ref: "PaymentMethod"}],
 
-    mascotas: [{ type: Schema.Types.ObjectId, ref: "Pet"}],
+    // mascotas: [{ type: Schema.Types.ObjectId, ref: "Pet"}],
 
-    pedidos: [{type: Schema.Types.ObjectId, ref: "Pedido"}],
+    // pedidos: [{type: Schema.Types.ObjectId, ref: "Pedido"}],
 
-    productos: [{type: Schema.Types.ObjectId, ref: "Producto"}],
+    // productos: [{type: Schema.Types.ObjectId, ref: "Producto"}],
 
-    rol: {
+    role: {
       type:String,
       enum: ["client", "admin"],
       default: "client",
     }
-    
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`
