@@ -2,26 +2,25 @@
 .footer-seccion{
     bottom: 0;
     position: fixed;
+    width: 100vw;
 }
 
 .footerCompleto{
-    padding: 1rem 0 1rem 0;
+    background: rgb(69,179,252);
+    background: linear-gradient(90deg, rgba(69,179,252,1) 5%, rgba(212,29,253,0.4601739621629902) 51%, rgba(69,179,252,0.35933362602853647) 93%);
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-image: url(../images/pawfondo.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-top: 1rem;
+    justify-content: left;
     width: 100vw;
+    height: 50px;
+    font-family: 'Comfortaa', sans-serif;
+
 }
-.contenedor-footer{
-    padding-top: 15px;
-}
+
 .copyright{
+    display: flex;
     color: black;
-    text-align: center;
+
+
     padding: 16px;
     margin: 15px;
 }
