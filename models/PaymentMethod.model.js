@@ -1,6 +1,6 @@
 const { Schema, model } = require("mongoose");
 
-const pMethodSchema = new Schema(
+const PaymentMethodSchema = new Schema(
     {
       number: {
         type: String,
@@ -23,6 +23,6 @@ const pMethodSchema = new Schema(
     }
 )
 
-const pMehtod = model("PaymentMethod", pMethodSchema);
+const PaymentMethod = model("PaymentMethod", pMethodSchema);
 
-module.exports = pMehtod;
+module.exports = PaymentMethod;
