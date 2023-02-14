@@ -1,5 +1,5 @@
-    <!-- Navbar -->
-<div class="bodyProfile">
+  <!-- Navbar -->
+    <div class="bodyProfile">
         <header class="header-inicio">
             <div class="contenedor-header">
             <div class="barra">
@@ -15,61 +15,29 @@
             </div>
         </header>
 
-    <!-- Barra Lateral -->
-    <div class="sidenav">
-        <div class="profile">
-            <div>
-            <img src="https://s1.qwant.com/thumbr/474x474/b/d/abcd7d626c46523120741bf4795830dbb0f780511c292b059a80411ccc59ff/th.jpg?u=https%3A%2F%2Ftse.mm.bing.net%2Fth%3Fid%3DOIP.3-rUE4SORzLoGxaLp7KvLAHaHa%26pid%3DApi&q=0&b=1&p=0&a=0" alt="" width="100" height="100">
-            </div>
-
-            <div class="name">
-                <p>Name</p> 
-            </div>  
-        </div>
+<div id="form">
+  <form action="/user/appointment" method="POST">
+     <h2>Create appointment</h2>
+   
+    <div class="grupo inlined">
+        <label for="checkin-appointment">Date for appointment</label>
+        <input type="datetime-local" id="checkin-appointment" name="checkin" required>
     </div>
 
-
-    <!-- MainProfile -->
-    <div class="mainProfile">
-        <h2>Profile</h2>
-        <div class="card">
-            <div class="card-body">
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>Name:</td>
-                            <td></td>
-                            <td>Name</td>
-                        </tr>
-                        <tr>
-                            <td>Email:</td>
-                            <td></td>
-                            <td>user@gmail.com</td>
-                        </tr>
-                        <tr>
-                            <td>Address:</td>
-                            <td></td>
-                            <td>Mexico</td>
-                        </tr>
-                        <tr>
-                            <td>Birth Day:</td>
-                            <td></td>
-                            <td>12/08/200</td>
-                        </tr>
-                        <tr>
-                            <td>Phone:</td>
-                            <td></td>
-                            <td>445 145 78 95</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+    <div class="grupo">
+        <label for="pets">Select Pet</label>
+        <select id="pets" name="pets" required>
+            <option value="">Choose you pet</option>
+            <option value="copo">Copo</option>
+            <option value="Gala">Gala</option>
+            <option value="Snoopy">Snoopy</option>
+        </select>
     </div>
 
-    <div class="creacionMascota">
-        
+    <button type="submit">Create Event</button>
 
-    </div>
-
+    {{#if errorMessage}}
+      <p class="error">{{errorMessage}}</p>
+    {{/if}}
+  </form>
 </div>

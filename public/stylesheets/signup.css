@@ -108,6 +108,11 @@ label.light {
   border-radius: 100%;
 }
 
+.spaceSignup{
+  margin-bottom: 200px;
+}
+
+
 @media screen and (min-width: 480px) {
 
   form {

@@ -13,10 +13,29 @@
             </nav>
         </div>
     </header>
-
-    <div class="formAppointment">
-
-        
-
+<div id="form">
+  <form action="/user/appointment" method="POST">
+     <h2>Create appointment</h2>
+   
+    <div class="grupo inlined">
+        <label for="checkin-appointment">Date for appointment</label>
+        <input type="datetime-local" id="checkin-appointment" name="checkin" required>
     </div>
-    
+
+    <div class="grupo">
+        <label for="pets">Select Pet</label>
+        <select id="pets" name="pets" required>
+            <option value="">Choose you pet</option>
+            <option value="copo">Copo</option>
+            <option value="Gala">Gala</option>
+            <option value="Snoopy">Snoopy</option>
+        </select>
+    </div>
+
+    <button type="submit">Create </button>
+
+    {{#if errorMessage}}
+      <p class="error">{{errorMessage}}</p>
+    {{/if}}
+  </form>
+</div>
