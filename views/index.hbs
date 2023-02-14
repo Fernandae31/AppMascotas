@@ -18,46 +18,75 @@
   </header>
 {{!-- Navegacion --}}
   <nav class="navegacion-principal"> 
-           
+              {{#unless userInSession}}
               <a href="/auth/login">
-              <button class="btn btn-primary login" style="background-color: rgb(69,179,252);
-  background: linear-gradient(90deg, rgba(69,179,252,1) 5%, rgba(212,29,253,0.4601739621629902) 51%, rgba(69,179,252,0.35933362602853647) 93%);border: none;"> 
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="m10.998 16 5-4-5-4v3h-9v2h9z"></path><path d="M12.999 2.999a8.938 8.938 0 0 0-6.364 2.637L8.049 7.05c1.322-1.322 3.08-2.051 4.95-2.051s3.628.729 4.95 2.051S20 10.13 20 12s-.729 3.628-2.051 4.95-3.08 2.051-4.95 2.051-3.628-.729-4.95-2.051l-1.414 1.414c1.699 1.7 3.959 2.637 6.364 2.637s4.665-.937 6.364-2.637C21.063 16.665 22 14.405 22 12s-.937-4.665-2.637-6.364a8.938 8.938 0 0 0-6.364-2.637z"></path></svg>
-                Login
-              </button>
+                <button class="btn btn-primary login" style="background-color: rgb(69,179,252);
+                background: linear-gradient(90deg, rgba(69,179,252,1) 5%, rgba(212,29,253,0.4601739621629902) 51%, rgba(69,179,252,0.35933362602853647) 93%);border: none;"> 
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="m10.998 16 5-4-5-4v3h-9v2h9z"></path><path d="M12.999 2.999a8.938 8.938 0 0 0-6.364 2.637L8.049 7.05c1.322-1.322 3.08-2.051 4.95-2.051s3.628.729 4.95 2.051S20 10.13 20 12s-.729 3.628-2.051 4.95-3.08 2.051-4.95 2.051-3.628-.729-4.95-2.051l-1.414 1.414c1.699 1.7 3.959 2.637 6.364 2.637s4.665-.937 6.364-2.637C21.063 16.665 22 14.405 22 12s-.937-4.665-2.637-6.364a8.938 8.938 0 0 0-6.364-2.637z"></path></svg>
+                  Login
+                </button>
               </a>
+              {{/unless}}
+
               {{!-- Boton Logout --}}
-              <a href="/auth/logout">
-              <button class="btn btn-primary logout"style="background-color: rgb(69,179,252);
-  background: linear-gradient(90deg, rgba(69,179,252,1) 5%, rgba(212,29,253,0.4601739621629902) 51%, rgba(69,179,252,0.35933362602853647) 93%); border: none;"> 
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="m2 12 5 4v-3h9v-2H7V8z"></path><path d="M13.001 2.999a8.938 8.938 0 0 0-6.364 2.637L8.051 7.05c1.322-1.322 3.08-2.051 4.95-2.051s3.628.729 4.95 2.051 2.051 3.08 2.051 4.95-.729 3.628-2.051 4.95-3.08 2.051-4.95 2.051-3.628-.729-4.95-2.051l-1.414 1.414c1.699 1.7 3.959 2.637 6.364 2.637s4.665-.937 6.364-2.637c1.7-1.699 2.637-3.959 2.637-6.364s-.937-4.665-2.637-6.364a8.938 8.938 0 0 0-6.364-2.637z"></path></svg>
-                Logout
-              </button>
+              {{#unless userInSession}}
+              <a href="/auth/signup">
+                <button class="btn btn-primary spa"style="background-color: rgb(69,179,252);
+                background: linear-gradient(90deg, rgba(69,179,252,1) 5%, rgba(212,29,253,0.4601739621629902) 51%, rgba(69,179,252,0.35933362602853647) 93%);border: none;"> 
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M21 10H7V7c0-1.103.897-2 2-2s2 .897 2 2h2c0-2.206-1.794-4-4-4S5 4.794 5 7v3H3a1 1 0 0 0-1 1v2c0 2.606 1.674 4.823 4 5.65V22h2v-3h8v3h2v-3.35c2.326-.827 4-3.044 4-5.65v-2a1 1 0 0 0-1-1zm-1 3c0 2.206-1.794 4-4 4H8c-2.206 0-4-1.794-4-4v-1h16v1z"></path></svg>
+                  Signup
+                </button>
               </a>
+              {{/unless}}
+
+              {{!-- Boton Logout --}}
+              {{#if userInSession}}
+              <a href="/auth/logout">
+                <button class="btn btn-primary logout"style="background-color: rgb(69,179,252);
+                background: linear-gradient(90deg, rgba(69,179,252,1) 5%, rgba(212,29,253,0.4601739621629902) 51%, rgba(69,179,252,0.35933362602853647) 93%); border: none;"> 
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="m2 12 5 4v-3h9v-2H7V8z"></path><path d="M13.001 2.999a8.938 8.938 0 0 0-6.364 2.637L8.051 7.05c1.322-1.322 3.08-2.051 4.95-2.051s3.628.729 4.95 2.051 2.051 3.08 2.051 4.95-.729 3.628-2.051 4.95-3.08 2.051-4.95 2.051-3.628-.729-4.95-2.051l-1.414 1.414c1.699 1.7 3.959 2.637 6.364 2.637s4.665-.937 6.364-2.637c1.7-1.699 2.637-3.959 2.637-6.364s-.937-4.665-2.637-6.364a8.938 8.938 0 0 0-6.364-2.637z"></path></svg>
+                  Logout
+                </button>
+              </a>
+              {{/if}}
               {{!-- Boton Cats --}}
-              <a href="/auth/cats">
-              <button class="btn btn-primary cats"style="background-color:  rgb(69,179,252);
-  background: linear-gradient(90deg, rgba(69,179,252,1) 5%, rgba(212,29,253,0.4601739621629902) 51%, rgba(69,179,252,0.35933362602853647) 93%);border: none;"> 
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M17 14a5 5 0 0 0 2.71-.81L20 13a3.16 3.16 0 0 0 .45-.37l.21-.2a4.48 4.48 0 0 0 .48-.58l.06-.08a4.28 4.28 0 0 0 .41-.76 1.57 1.57 0 0 0 .09-.23 4.21 4.21 0 0 0 .2-.63l.06-.25A5.5 5.5 0 0 0 22 9V2l-3 3h-4l-3-3v7a5 5 0 0 0 5 5zm2-7a1 1 0 1 1-1 1 1 1 0 0 1 1-1zm-4 0a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"></path><path d="M11 22v-5H8v5H5V11.9a3.49 3.49 0 0 1-2.48-1.64A3.59 3.59 0 0 1 2 8.5 3.65 3.65 0 0 1 6 5a1.89 1.89 0 0 0 2-2 1 1 0 0 1 1-1 1 1 0 0 1 1 1 3.89 3.89 0 0 1-4 4C4.19 7 4 8.16 4 8.51S4.18 10 6 10h5.09A6 6 0 0 0 19 14.65V22h-3v-5h-2v5z"></path></svg>
-                Cats
-              </button>
+              <a href="/products/cats">
+                <button class="btn btn-primary cats"style="background-color:  rgb(69,179,252);
+                background: linear-gradient(90deg, rgba(69,179,252,1) 5%, rgba(212,29,253,0.4601739621629902) 51%, rgba(69,179,252,0.35933362602853647) 93%);border: none;"> 
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M17 14a5 5 0 0 0 2.71-.81L20 13a3.16 3.16 0 0 0 .45-.37l.21-.2a4.48 4.48 0 0 0 .48-.58l.06-.08a4.28 4.28 0 0 0 .41-.76 1.57 1.57 0 0 0 .09-.23 4.21 4.21 0 0 0 .2-.63l.06-.25A5.5 5.5 0 0 0 22 9V2l-3 3h-4l-3-3v7a5 5 0 0 0 5 5zm2-7a1 1 0 1 1-1 1 1 1 0 0 1 1-1zm-4 0a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"></path><path d="M11 22v-5H8v5H5V11.9a3.49 3.49 0 0 1-2.48-1.64A3.59 3.59 0 0 1 2 8.5 3.65 3.65 0 0 1 6 5a1.89 1.89 0 0 0 2-2 1 1 0 0 1 1-1 1 1 0 0 1 1 1 3.89 3.89 0 0 1-4 4C4.19 7 4 8.16 4 8.51S4.18 10 6 10h5.09A6 6 0 0 0 19 14.65V22h-3v-5h-2v5z"></path></svg>
+                  Cats
+                </button>
               </a>
               {{!-- Boton Dogs --}}
-              <a href="/auth/dogs">
-              <button class="btn btn-primary dogs"style="background-color: rgb(69,179,252);
-  background: linear-gradient(90deg, rgba(69,179,252,1) 5%, rgba(212,29,253,0.4601739621629902) 51%, rgba(69,179,252,0.35933362602853647) 93%);border: none;"> 
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M21 6h-2l-1.27-1.27A2.49 2.49 0 0 0 16 4h-2.5A2.64 2.64 0 0 0 11 2v6.36a4.38 4.38 0 0 0 1.13 2.72 6.57 6.57 0 0 0 4.13 1.82l3.45-1.38a3 3 0 0 0 1.73-1.84L22 8.15a1.06 1.06 0 0 0 0-.31V7a1 1 0 0 0-1-1zm-5 2a1 1 0 1 1 1-1 1 1 0 0 1-1 1z"></path><path d="M11.38 11.74A5.24 5.24 0 0 1 10.07 9H6a1.88 1.88 0 0 1-2-2 1 1 0 0 0-2 0 4.69 4.69 0 0 0 .48 2A3.58 3.58 0 0 0 4 10.53V22h3v-5h6v5h3v-8.13a7.35 7.35 0 0 1-4.62-2.13z"></path></svg>
-                Dogs
-              </button>
+              <a href="/products/dogs">
+                <button class="btn btn-primary dogs"style="background-color: rgb(69,179,252);
+                background: linear-gradient(90deg, rgba(69,179,252,1) 5%, rgba(212,29,253,0.4601739621629902) 51%, rgba(69,179,252,0.35933362602853647) 93%);border: none;"> 
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M21 6h-2l-1.27-1.27A2.49 2.49 0 0 0 16 4h-2.5A2.64 2.64 0 0 0 11 2v6.36a4.38 4.38 0 0 0 1.13 2.72 6.57 6.57 0 0 0 4.13 1.82l3.45-1.38a3 3 0 0 0 1.73-1.84L22 8.15a1.06 1.06 0 0 0 0-.31V7a1 1 0 0 0-1-1zm-5 2a1 1 0 1 1 1-1 1 1 0 0 1-1 1z"></path><path d="M11.38 11.74A5.24 5.24 0 0 1 10.07 9H6a1.88 1.88 0 0 1-2-2 1 1 0 0 0-2 0 4.69 4.69 0 0 0 .48 2A3.58 3.58 0 0 0 4 10.53V22h3v-5h6v5h3v-8.13a7.35 7.35 0 0 1-4.62-2.13z"></path></svg>
+                  Dogs
+                </button>
               </a>
               {{!-- Boton Spa --}}
-              <a href="/auth/spa">
-              <button class="btn btn-primary spa"style="background-color: rgb(69,179,252);
-  background: linear-gradient(90deg, rgba(69,179,252,1) 5%, rgba(212,29,253,0.4601739621629902) 51%, rgba(69,179,252,0.35933362602853647) 93%);border: none;"> 
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M21 10H7V7c0-1.103.897-2 2-2s2 .897 2 2h2c0-2.206-1.794-4-4-4S5 4.794 5 7v3H3a1 1 0 0 0-1 1v2c0 2.606 1.674 4.823 4 5.65V22h2v-3h8v3h2v-3.35c2.326-.827 4-3.044 4-5.65v-2a1 1 0 0 0-1-1zm-1 3c0 2.206-1.794 4-4 4H8c-2.206 0-4-1.794-4-4v-1h16v1z"></path></svg>
-                Spa
-              </button>
+              {{#if userInSession}}
+              <a href="/user/spa">
+                <button class="btn btn-primary spa"style="background-color: rgb(69,179,252);
+                background: linear-gradient(90deg, rgba(69,179,252,1) 5%, rgba(212,29,253,0.4601739621629902) 51%, rgba(69,179,252,0.35933362602853647) 93%);border: none;"> 
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M21 10H7V7c0-1.103.897-2 2-2s2 .897 2 2h2c0-2.206-1.794-4-4-4S5 4.794 5 7v3H3a1 1 0 0 0-1 1v2c0 2.606 1.674 4.823 4 5.65V22h2v-3h8v3h2v-3.35c2.326-.827 4-3.044 4-5.65v-2a1 1 0 0 0-1-1zm-1 3c0 2.206-1.794 4-4 4H8c-2.206 0-4-1.794-4-4v-1h16v1z"></path></svg>
+                  Spa
+                </button>
               </a>
+              {{/if}}
+
+              {{#if userInSession}}
+              <a href="/profile/{{userInSession._id}}">
+                <img src="{{userInSession.photo}}" width="30" height="30"/>
+                <strong>{{userInSession.name}}</strong>
+              </a>
+              {{/if}}
+
+               {{!-- <a href="/profile/{{userInSession._id}}">
+                <img src="{{userInSession.photo}}" width="30" height="30"/>
+                <strong>{{userInSession.name}}</strong>
+              </a> --}}
           </nav>
 
 {{!-- Imagen --}}

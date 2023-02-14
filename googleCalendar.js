@@ -33,14 +33,14 @@ const auth = new google.auth.GoogleAuth({
 });
 
 const calendarEvent = {
-  summary: "Prueba 1",
-  description: "",
+  summary: "Prueba 2",
+  description: "Hola",
   start: {
-    dateTime: "2023-02-13T07:00:00",
+    dateTime: "2023-02-14T07:00:00",
     timeZone: "America/Mexico_City",
   },
   end: {
-    dateTime: "2023-02-13T08:00:00",
+    dateTime: "2023-02-14T08:00:00",
     timeZone: "America/Mexico_City",
   },
   reminders: {

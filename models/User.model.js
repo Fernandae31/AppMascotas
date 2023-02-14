@@ -21,7 +21,7 @@ const userSchema = new Schema(
     },
     birthDay: {
       type: Date,
-      require:false,
+      required:false,
     },
     photo: {
       type:String,
