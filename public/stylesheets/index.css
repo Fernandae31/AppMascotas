@@ -5,7 +5,6 @@
 }
 
 
-
 .titlesIndex{
   display: flex;
   justify-content: center;
@@ -35,7 +34,7 @@ a{
 }
 
 .spaceBottom{
-  margin-bottom: 100px;
+  margin-bottom: 300px;
 }
 
 .login{

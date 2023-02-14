@@ -15,7 +15,7 @@
 </header>  
   
   <div id="form">
-    <form action="/auth/signup" method="post" class="formSignup">
+    <form action="/signup" method="post" class="formSignup">
       
         <h2>Sign Up</h2>
         
@@ -84,6 +84,10 @@
           <input class="inputCard" type="hidden" name="expiry" id="expiry" maxlength="4"/>
         </section>
       <button type="submit">Sign Up</button>
+
+      <div class="spaceSignup">
+
+      </div>
 
        {{#if errorMessage}}
       <p class="error">{{errorMessage}}</p>
