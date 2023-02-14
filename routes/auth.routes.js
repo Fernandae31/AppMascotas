@@ -23,9 +23,10 @@ router.get("/signup", isLoggedOut, (req, res) => {
 // POST /auth/signup
 router.post("/signup", isLoggedOut, (req, res) => {
   const { name, email, password, phone, birthDay, address } = req.body;
+  console.log(req.body)
 
   // Check that name, email, and password are provided
-  if (name === "" || email === "" || password === "" || phone === "" || address === "") {
+  if (name === "" || email === "" || password === "" ) {
     res.status(400).render("auth/signup", {
       errorMessage:
         "All fields are mandatory. Please provide your name, email and password.",
@@ -134,7 +135,11 @@ router.post("/login", isLoggedOut, (req, res, next) => {
           // Remove the password field
           delete req.session.currentUser.password;
 
-          res.redirect("/user/profile");
+          if (user.role === "admin") {
+            res.redirect("/");
+          } else if (user.role === "client") {
+            res.redirect("/")
+          }
         })
         .catch((err) => next(err)); // In this case, we send error handling to the error handling middleware.
     })

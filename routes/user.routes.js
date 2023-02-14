@@ -3,6 +3,7 @@ const router = express.Router();
 const axios = require('axios');
 
 
+
 // API Google
 const { google } = require("googleapis")
 
@@ -24,15 +25,20 @@ const User = require("../models/User.model");
 // Require necessary (isLoggedOut and isLiggedIn) middleware in order to control access to specific routes
 const isLoggedOut = require("../middleware/isLoggedOut");
 const isLoggedIn = require("../middleware/isLoggedIn");
-const { compare } = require("bcrypt");
 
 
-router.get("/profile", isLoggedOut, (req, res) => {
-    res.render("user/profile");
+
+router.get("/profile/:id",  (req, res) => {
+    const { id } = req.params
+    User.findById(id)
+    .then(data => {
+      res.render("user/profile", { userInSession: req.session.currentUser, data } );
+    })
+    .catch(err => next(err))
   });
 
-router.get("/spa", isLoggedOut, (req, res) => {
-  res.render("user/appointment");
+router.get("/spa", isLoggedIn, (req, res) => {
+  res.render("user/spa");
 });
 
 
