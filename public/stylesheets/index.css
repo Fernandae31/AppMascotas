@@ -48,3 +48,15 @@ a{
 p{
   font-size: 15px;
 }
+
+.faviconProfile{
+  border-radius: 50px;
+}
+
+.nameUserInSession{
+  text-decoration: none;
+}
+
+.btnHome{
+  text-decoration: none;
+}
