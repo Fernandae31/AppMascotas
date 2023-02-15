@@ -13,14 +13,16 @@
             </nav>
         </div>
     </header>
-<div id="form">
-  <form action="/user/appointment" method="POST">
-     <h2>Create appointment</h2>
-   
-    <div class="grupo inlined">
-        <label for="checkin-appointment">Date for appointment</label>
-        <input type="datetime-local" id="checkin-appointment" name="checkin" required>
-    </div>
+
+<form id="add-event-form">
+  <label for="event-title">Creat Event:</label>
+  <input type="text" id="event-title" name="event-title">
+
+  <label for="event-start">Start Time:</label>
+  <input type="datetime-local" id="event-start" name="event-start">
+
+  <label for="event-end">End Time:</label>
+  <input type="datetime-local" id="event-end" name="event-end">
 
     <div class="grupo">
         <label for="pets">Select Pet</label>
@@ -32,10 +34,10 @@
         </select>
     </div>
 
-    <button type="submit">Create </button>
+  <button type="submit">Add event</button>
 
-    {{#if errorMessage}}
+   {{#if errorMessage}}
       <p class="error">{{errorMessage}}</p>
     {{/if}}
-  </form>
-</div>
+</form>
+

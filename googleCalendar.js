@@ -33,14 +33,14 @@ const auth = new google.auth.GoogleAuth({
 });
 
 const calendarEvent = {
-  summary: "Prueba 2",
+  summary: "Lllamda con Alexis",
   description: "Hola",
   start: {
-    dateTime: "2023-02-14T07:00:00",
+    dateTime: "2023-02-14T21:00:00",
     timeZone: "America/Mexico_City",
   },
   end: {
-    dateTime: "2023-02-14T08:00:00",
+    dateTime: "2023-02-14T22:00:00",
     timeZone: "America/Mexico_City",
   },
   reminders: {
@@ -99,3 +99,8 @@ const listCalendarEvents = () => {
 listCalendarEvents();
 
 app.listen(3000, () => console.log(`App listening on port 3000!`));
+
+module.export = [{
+  addCalendarEvent,
+  listCalendarEvents
+}]

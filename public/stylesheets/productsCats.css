@@ -1,0 +1,4 @@
+.cardProducts{
+    display: flex;
+    flex-wrap: wrap;
+}
