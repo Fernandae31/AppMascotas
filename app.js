@@ -1,3 +1,6 @@
+// Handles Momemt
+const moment = require("moment")
+
 // ℹ️ Gets access to environment variables/settings
 // https://www.npmjs.com/package/dotenv
 require("dotenv").config();
@@ -12,6 +15,11 @@ const express = require("express");
 // Handles the handlebars
 // https://www.npmjs.com/package/hbs
 const hbs = require("hbs");
+
+// Formato fecha
+ hbs.registerHelper("formatoFecha", (Date) => {
+    return moment(Date).format("DD/MM/YYY")
+ })
 
 const app = express();
 

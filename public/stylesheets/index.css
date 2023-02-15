@@ -60,3 +60,14 @@ p{
 .btnHome{
   text-decoration: none;
 }
+
+.formDelete{
+  padding: 0;
+  width: 55px;
+}
+
+.divDelete{
+  display: flex;
+  flex-direction: row;
+  margin: 3px;
+}
