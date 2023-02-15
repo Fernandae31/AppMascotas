@@ -27,10 +27,21 @@ h1 {
   font-weight: bold;
   font-size: 500px;
 }
+
+.footerCompleto{
+  background: rgb(69,179,252);
+  background: linear-gradient(90deg, rgba(69,179,252,1) 5%, rgba(212,29,253,0.4601739621629902) 51%, rgba(69,179,252,0.35933362602853647) 93%);
+  text-align: left;
+  font-family: 'Comfortaa', sans-serif;
+  font-weight: bold;
+  width: 100vw;
+  height: 10vh;
+}
 @media (max-with: 1140px){
   .body{
     height: 35vh;
     max-width: 1100px;
   }
+
 
 }
