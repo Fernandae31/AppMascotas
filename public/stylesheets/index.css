@@ -12,6 +12,11 @@
 
 h3{
   font-size: 50px;
+  font-family: 'Comfortaa', sans-serif;
+  font-weight: bold;
+}
+h5{
+  font-weight: bold;
 }
 
 a{
@@ -25,6 +30,7 @@ a{
   display: flex;
   justify-content: center;
   margin: 10px;
+  font-family: 'Comfortaa', sans-serif;
 }
 
 .card{
@@ -38,4 +44,7 @@ a{
 
 .login{
   width: 150px;
+}
+p{
+  font-size: 15px;
 }

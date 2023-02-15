@@ -50,7 +50,7 @@
               </a>
               {{/if}}
               {{!-- Boton Cats --}}
-              <a href="/products/cats">
+              <a class="catB" href="/products/cats">
                 <button class="btn btn-primary cats"style="background-color:  rgb(69,179,252);
                 background: linear-gradient(90deg, rgba(69,179,252,1) 5%, rgba(212,29,253,0.4601739621629902) 51%, rgba(69,179,252,0.35933362602853647) 93%);border: none;"> 
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M17 14a5 5 0 0 0 2.71-.81L20 13a3.16 3.16 0 0 0 .45-.37l.21-.2a4.48 4.48 0 0 0 .48-.58l.06-.08a4.28 4.28 0 0 0 .41-.76 1.57 1.57 0 0 0 .09-.23 4.21 4.21 0 0 0 .2-.63l.06-.25A5.5 5.5 0 0 0 22 9V2l-3 3h-4l-3-3v7a5 5 0 0 0 5 5zm2-7a1 1 0 1 1-1 1 1 1 0 0 1 1-1zm-4 0a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"></path><path d="M11 22v-5H8v5H5V11.9a3.49 3.49 0 0 1-2.48-1.64A3.59 3.59 0 0 1 2 8.5 3.65 3.65 0 0 1 6 5a1.89 1.89 0 0 0 2-2 1 1 0 0 1 1-1 1 1 0 0 1 1 1 3.89 3.89 0 0 1-4 4C4.19 7 4 8.16 4 8.51S4.18 10 6 10h5.09A6 6 0 0 0 19 14.65V22h-3v-5h-2v5z"></path></svg>
@@ -58,7 +58,7 @@
                 </button>
               </a>
               {{!-- Boton Dogs --}}
-              <a href="/products/dogs">
+              <a class="dogB" href="/products/dogs">
                 <button class="btn btn-primary dogs"style="background-color: rgb(69,179,252);
                 background: linear-gradient(90deg, rgba(69,179,252,1) 5%, rgba(212,29,253,0.4601739621629902) 51%, rgba(69,179,252,0.35933362602853647) 93%);border: none;"> 
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M21 6h-2l-1.27-1.27A2.49 2.49 0 0 0 16 4h-2.5A2.64 2.64 0 0 0 11 2v6.36a4.38 4.38 0 0 0 1.13 2.72 6.57 6.57 0 0 0 4.13 1.82l3.45-1.38a3 3 0 0 0 1.73-1.84L22 8.15a1.06 1.06 0 0 0 0-.31V7a1 1 0 0 0-1-1zm-5 2a1 1 0 1 1 1-1 1 1 0 0 1-1 1z"></path><path d="M11.38 11.74A5.24 5.24 0 0 1 10.07 9H6a1.88 1.88 0 0 1-2-2 1 1 0 0 0-2 0 4.69 4.69 0 0 0 .48 2A3.58 3.58 0 0 0 4 10.53V22h3v-5h6v5h3v-8.13a7.35 7.35 0 0 1-4.62-2.13z"></path></svg>
@@ -67,7 +67,7 @@
               </a>
               {{!-- Boton Spa --}}
               {{#if userInSession}}
-              <a href="/user/spa">
+              <a class="spaB" href="/user/spa">
                 <button class="btn btn-primary spa"style="background-color: rgb(69,179,252);
                 background: linear-gradient(90deg, rgba(69,179,252,1) 5%, rgba(212,29,253,0.4601739621629902) 51%, rgba(69,179,252,0.35933362602853647) 93%);border: none;"> 
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M21 10H7V7c0-1.103.897-2 2-2s2 .897 2 2h2c0-2.206-1.794-4-4-4S5 4.794 5 7v3H3a1 1 0 0 0-1 1v2c0 2.606 1.674 4.823 4 5.65V22h2v-3h8v3h2v-3.35c2.326-.827 4-3.044 4-5.65v-2a1 1 0 0 0-1-1zm-1 3c0 2.206-1.794 4-4 4H8c-2.206 0-4-1.794-4-4v-1h16v1z"></path></svg>
@@ -83,17 +83,10 @@
               </a>
               {{/if}}
 
-               {{!-- <a href="/profile/{{userInSession._id}}">
-                <img src="{{userInSession.photo}}" width="30" height="30"/>
-                <strong>{{userInSession.name}}</strong>
-              </a> --}}
           </nav>
 
-{{!-- Imagen --}}
-<div class="contenedor-seccion"></div>
-{{!-- final Imagen --}}
-
   {{!-- Seccion 1 tarjetas --}}
+  <img alt="catFood" class="img-banner" style="width: 100vw; display: block;" src="/images/banner1.png">
     <div class="titlesIndex">
     <h3>Cat Toys</h3>
   </div>
@@ -145,10 +138,11 @@
   </div>
 
    {{!-- Seccion 2 tarjetas --}}
+   <img alt="dogToys" class="img-banner" style="width: 100vw; height: 65vh; display: block;" src="/images/banner2.jpg">
     <div class="titlesIndex">
+
     <h3>Dog Toys</h3>
   </div>
-
   <div class="tarjetas">
     <div class="card" style="width: 18rem;" class="grid gap-0 row-gap-3">
       <img src="/images/juguete1.jpeg" class="card-img-top" alt="...">
@@ -195,10 +189,10 @@
   </div>
   {{!-- Tarjetas Accesorios --}}
    {{!-- Seccion 3 tarjetas --}}
+    <img alt="petAccesories" class="img-banner" style="width: 100vw; height:auto; display: block;" src="/images/banner3.jpg">
     <div class="titlesIndex">
     <h3>Accesories</h3>
   </div>
-
   <div class="tarjetas">
     <div class="card" style="width: 18rem;" class="grid gap-0 row-gap-3">
       <img src="/images/acc1.jpeg" class="card-img-top" alt="...">
@@ -239,8 +233,77 @@
       </div>
     </div>
   </div>
-  {{!-- Seccion 4 tarjetas --}}
+  {{!-- Seccion 2 tarjetas --}}
 
+{{!--  --}}
+  <img alt="catFood" class="img-banner" style="width: 100vw; display: block;" src="/images/banner4.png">
+    <div class="titlesIndex">
+    <h3>Cat Toys</h3>
+  </div>
+
+  <div class="tarjetas">
+    <div class="card" style="width: 18rem;" class="grid gap-0 row-gap-3">
+      <img src="images/comida1.1.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Black Hawk Grain Free Chicken & Lamb Wet Cat Food 1.5kg</h5>
+        <p>Ingredients: Chicken Meal, Rice, Vegetable Protein, Oats, 
+          Chicken Fat (preserved with Mixed Tocopherols [source of Vitamin E],
+           Rosemary Extract, Vitamin C), Beet Pulp, Salt, Egg Powder, 
+           Canola Oil, hicory Root, Flaxseed, Fish Oil, Pumpkin Seed Powder,
+            Alfalfa, Natural Antioxidants,Probiotic (Bacillus Coagulant).</p>
+        <p>$500</p>
+        <p>Adult</p>
+        <p class="card-text"></p>
+        <a href="#" class="btn btn-dark">Add to cart</a>
+      </div>
+    </div>
+    {{!-- juguete2 --}}
+    <div class="card" style="width: 18rem;">
+      <img src="images/comida1.1.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Black Hawk Grain Free Chicken & Lamb Wet Cat Food 1.5kg</h5>
+        <p>Ingredients: Chicken Meal, Rice, Vegetable Protein, Oats, 
+          Chicken Fat (preserved with Mixed Tocopherols [source of Vitamin E],
+           Rosemary Extract, Vitamin C), Beet Pulp, Salt, Egg Powder, 
+           Canola Oil,Chicory Root, Flaxseed, Fish Oil, Pumpkin Seed Powder,
+            Alfalfa, Natural Antioxidants, Probiotic (Bacillus Coagulant).</p>
+          <p>Adult</p>
+         <p>$500</p>
+        <a href="#" class="btn btn-dark">Add to cart</a>
+      </div>
+    </div>
+{{!-- juguete 3 --}}
+    <div class="card" style="width: 18rem;">
+      <img src="images/comida1.3.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Black Hawk Original Chicken Dry Cat Food - 1.5kg</h5>
+        <p class="card-text">Ingredients: Rosemary Extract, Vitamin C), Beet Pulp, Canola Oil, Salt, Egg Powder, Chicory Root, Flaxseed, Fish Oil, Pumpkin Seed Powder, Alfalfa, Probiotic (Bacillus Coagulant), Natural Antioxidants, Coconut Oil, Yoghurt Powder, Emu Oil, Blueberries, Cranberries, Rosemary, Essential Vitamins & Minerals.</p>
+        <p>$500</p>
+        <p>Kitten</p>
+        <a href="#" class="btn btn-dark">Add to cart</a>
+      </div>
+    </div>
+{{!-- juguete 4 --}}
+    <div class="card" style="width: 18rem;">
+      <img src="images/comida1.4.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Black Hawk Grain Free Adult Chicken, Duck & Fish</h5>
+        <p>Ingredients: Duck, Peas, Chicken Broth,
+           Plasma Protein, Tuna, 
+          Ocean Fish, Egg Powder, Fish Oil, Essential Vitamins & Minerals, 
+          Guar Gum, Salt, Caramel, Xanthan Gum, Taurine, Emu Oil, Glucosamine HCl,
+           Chondroitin Sulphate,
+           Cranberries, Blueberries, 
+           Coconut, Pumpkin, Dried Kelp.</p>
+        <p class="card-text">$500</p>
+        <p>Adult</p>
+        <a href="#" class="btn btn-dark">Add to cart</a>
+      </div>
+    </div>
+  </div>
+  {{!--  --}}
+    {{!-- Seccion 4 tarjetas --}}
+     <img alt="dogFood" class="img-banner" style="width: 100vw;  display: block;" src="/images/banner5.jpg">
     <div>
     <h3 class="titlesIndex">Dog Food</h3> 
     </div>
@@ -249,14 +312,9 @@
       <img src="images/dog1.1.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Black Hawk Large Breed Adult Chicken & Rice Dry Dog Food 20kg</h5>
-        <p class="card-text">Lamb Meat Meal, Beef Meat Meal, Oats, 
+        <p class="card-text">Ingredients: Lamb Meat Meal, Beef Meat Meal, Oats, 
           Pea Protein, Rice, Chicken Fat (preserved with Mixed Tocopherols [source of Vitamin E], Citric Acid, Rosemary Extract), 
-          Field Peas, Fish Meal, Chicken Meal, Canola Oil, Beet Pulp, 
-          Essential Vitamins & Minerals (see tables), Eggs Dried, Fish Oil, Salt, 
-          Brewers Yeast, Flax Seed, Chicory Root, Natural Antioxidants, 
-          Emu Oil, Omega 6 Fatty Acids, Omega 3 Fatty Acids, Carrot, Yucca Schidigera, 
-          Tomato Powder, D-Glucosamine, Chondroitin, Blueberries, Cranberry, Dandelion Tea,
-           Peppermint Tea, Kelp, Spinach, Rosemary.</p>
+            , Eggs Dried, Fish Oil, Salt,.</p>
            <p>$500</p>
            <p>Large Breed Adult </p>
         <a href="#" class="btn btn-dark">Add to cart</a>
@@ -266,11 +324,10 @@
       <img src="images/dog1.2.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Black Hawk Grain Free Chicken Dry Dog Food 15kg</h5>
-        <p class="card-text">Chicken Meal, Field Peas,
+        <p class="card-text">Ingredients: Chicken Meal, Field Peas,
            Chicken fat (preserved with Natural Antioxidants), 
-           Potato, Tapioca, Sweet Potato, Beet Pulp, 
-           Digest, Essential Vitamins & Minerals (see tables), Fish oil, Chicory Root, Alfalfa, Salt, Apple, Carrot, Glucosamine HCl, Brewer's Yeast, Natural Antioxidants, Pumpkin Seed, Yucca schidigera, Spinach, Dried Kelp, Tomato powder, Chondroitin Sulphate, Yoghurt Powder, Emu Oil, Coconut Oil, Blueberries, 
-          Cranberries, Dandelion, Peppermint, Rosemary.</p>
+           Fish oil, Chicory Root, 
+           Alfalfa, Salt, Apple, Carrot, Glucosamine HCl, Brewer's Yeast, Natural Antioxidants,.</p>
           <p>$500</p>
           <p>Large Breed Adult </p>
         <a href="#" class="btn btn-dark">Add to cart</a>
@@ -280,11 +337,8 @@
       <img src="images/dog1.3.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Black Hawk Dry Dog Food for Adult Working Dogs with Lamb and Beef - 20kg</h5>
-        <p>Chicken Meal, Ground Brown Rice, Ground Oats, 
-          Chicken Fat (preserved with mixed Tocopherols, 
-          source of Vitamin E, Citric Acid, Rosemary Extract), Beet Pulp,
-           Vegetable Oil, Chicken Flavour, Fish Meal, Linseed, Emu Oil,
-            Potassium Chloride, Choline Chloride, Tomato Powder, Natural Antioxidants, 
+        <p>Ingredients: Chicken Meal, Ground Brown Rice, Ground Oats,
+            Potassium Chloride, Choline Chloride,
             Yucca Schidigera Extract, L-Carnitine,
            Vitamin D3, Vitamin B12 Supplement.</p>
            <p>$500</p>
@@ -296,81 +350,12 @@
       <img src="images/dog1.4.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Advance Puppy</h5>
-        <p>Chicken Meal; Maize Gluten; Chicken Fat; Sorghum; 
+        <p>Ingredients: Chicken Meal; Maize Gluten; Chicken Fat; Sorghum; 
           Rice; Maize; Natural Flavour (Chicken); Vitamins and Minerals; 
           Dried Beet Pulp; Sunflower Oil; Turkey Meal; Salt; Inulin;
            Fish Oil; Colostrum; Antioxidants.</p>
         <p>$500</p>
         <p> Medium Breed </p>
-        <a href="#" class="btn btn-dark">Add to cart</a>
-      </div>
-    </div>
-  </div>
-  {{!-- Seccion 2 tarjetas --}}
-    <div>
-    <h3 class="titlesIndex">Cat Food</h3> 
-    </div>
-  <div class="tarjetas spaceBottom" >
-    <div class="card" style="width: 18rem;" class="grid gap-0 row-gap-3 column-gap-3">
-      <img src="images/comida1.1.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-      <h5 class="card-title">Black Hawk Grain Free Chicken & Lamb Wet Cat Food 1.5kg</h5>
-        <p>Chicken Meal, Rice, Vegetable Protein, Oats, 
-          Chicken Fat (preserved with Mixed Tocopherols [source of Vitamin E],
-           Rosemary Extract, Vitamin C), Beet Pulp, Salt, Egg Powder, 
-           Canola Oil, 
-           Chicory Root, Flaxseed, Fish Oil, Pumpkin Seed Powder,
-            Alfalfa, 
-           Natural Antioxidants, 
-          Probiotic (Bacillus Coagulant),</p>
-        
-        <p>$500</p>
-        <p> Adult</p>
-        <a href="#" class="btn btn-dark">Add to cart</a>
-      </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-      <img src="images/comida1.2.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-             <h5 class="card-title">Black Hawk Original Chicken Dry Cat Food - 1.5kg</h5>
-        <p> Chicken Meal, Chicken Fat (preserved with Mixed Tocopherols [source of Vitamin E], Rosemary Extract, Vitamin C), Beet Pulp, Canola Oil, Salt, Egg Powder,
-           Chicory Root, Flaxseed, Fish Oil, Pumpkin Seed Powder, Alfalfa, 
-           Probiotic (Bacillus Coagulant), Natural Antioxidants, Coconut Oil, 
-           Yoghurt Powder, Emu Oil, Blueberries, Cranberries, Rosemary, 
-           Essential Vitamins & Minerals.</p>
-        
-        <p>$500</p>
-        <p> Adult</p>
-        <a href="#" class="btn btn-dark">Add to cart</a>
-      </div>
-    </div>
-
-    <div class="card" style="width: 18rem;">
-      <img src="images/comida1.3.png" class="card-img-top" alt="...">
-      <div class="card-body">
-             <h5 class="card-title">Black Hawk Original Chicken Dry Cat Food - 1.5kg</h5>
-        <p>  Rosemary Extract, Vitamin C), Beet Pulp, Canola Oil, Salt, Egg Powder, Chicory Root, Flaxseed, Fish Oil, Pumpkin Seed Powder, Alfalfa, Probiotic (Bacillus Coagulant), Natural Antioxidants, Coconut Oil, Yoghurt Powder, Emu Oil, Blueberries, Cranberries, Rosemary, Essential Vitamins & Minerals.</p>
-        
-        <p>$500</p>
-        <p>Kitten</p>
-        <a href="#" class="btn btn-dark">Add to cart</a>
-      </div>
-    </div>
-
-    <div class="card" style="width: 18rem;">
-      <img src="images/comida1.4.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Black Hawk Grain Free Adult Chicken, Duck & Fish</h5>
-        <p>Duck, Peas, Chicken Broth,
-           Plasma Protein, Tuna, 
-          Ocean Fish, Egg Powder, Fish Oil, Essential Vitamins & Minerals, 
-          Guar Gum, Salt, Caramel, Xanthan Gum, Taurine, Emu Oil, Glucosamine HCl,
-           Chondroitin Sulphate,
-           Cranberries, Blueberries, 
-           Coconut, Pumpkin, Dried Kelp. </p>
-        
-        <p>$500</p>
-        <p>Adult</p>
         <a href="#" class="btn btn-dark">Add to cart</a>
       </div>
     </div>
