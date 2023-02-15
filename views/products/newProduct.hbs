@@ -1,25 +1,38 @@
 
-<form action="">
-    <div class="album py-5 bg-light">
-        <div class="container">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            <div class="col">
-            <div class="card shadow-sm">
-                <img src="https://assets.petco.com/petco/image/upload/c_pad,dpr_1.0,f_auto,q_auto,h_636,w_636/c_pad,h_636,w_636/1336380-center-1" alt="">
-                <div class="card-body">
-                <p class="card-text">Hill's Science Diet Adult Chicken Recipe Dry Cat Food.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    </div>
-                    <small class="text-muted">Food</small>
+    <form action="/products/newProduct" method="post" >
+        <div class="col">
+          <div class="card shadow-sm">
+                <label for="exampleFormControlInput2" class="form-label"><strong> Photo: </strong></label>
+                    <input type="text" class="form-control" id="exampleFormControlInput2" name="photo">
+                <label for="name"><strong> Name: </strong></label>
+                    <input type="text" name="name">
+                <label for="price"> <strong> Price:</strong></label>
+                    <input type="number" name="price">
+                <label for="description"><strong>Description:</strong> </label>
+                    <input type="text" name="description">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput" class="form-label"> <strong> Category:</strong></label>
+                    <select name="category"  value="" class="form-select">
+                        <option value=""></option>
+                        <option value="Food">Food</option>
+                        <option value="Toys">Toys</option>
+                        <option value="Accesories">Accesories</option>
+                    </select>
                 </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput" class="form-label"> <strong> Target:</strong></label>
+                    <select name="target"  value="" class="form-select">
+                        <option value=""></option>
+                        <option value="Dog">Dog</option>
+                        <option value="Cat">Cat</option>
+                    </select>
                 </div>
+              <p class="card-text"><strong>Quantity: </strong> <input type="number" name="quantity" min="1" ></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div  class="d-grid gap-2 col-6 mx-auto">
+                  <button type="submit" class="btn btn-sm btn-outline-secondary">Add Product</button>
+                </div>
+              </div>
             </div>
-            </div>
-        </div>
-        </div>
-    </div>
-</form>
- 
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+          </div>
+    </form>

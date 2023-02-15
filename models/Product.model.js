@@ -23,11 +23,11 @@ const productSchema = new Schema(
     },
     category: {
       type:String,
-      enum:["Food", "Toys", "Accesories", "Transportation"]
+      enum:["Food", "Toys", "Accesories"]
     },
     target: {
       type:String,
-      enum:["Dog", "Cat", "Both"]
+      enum:["Dog", "Cat"]
     }
   },
 

@@ -77,9 +77,9 @@
               {{/if}}
 
               {{#if userInSession}}
-              <a href="/user/profile/{{userInSession._id}}">
-                <img src="{{userInSession.photo}}" width="30" height="30"/>
-                <strong>{{userInSession.name}}</strong>
+              <a class="nameUserInSession" href="/user/profile/{{userInSession._id}}">
+                <img class="faviconProfile" src="{{userInSession.photo}}" width="30" height="30"/>
+                <strong >{{userInSession.name}}</strong>
               </a>
               {{/if}}
 

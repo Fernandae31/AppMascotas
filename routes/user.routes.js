@@ -62,6 +62,8 @@ router.get("/spa", isLoggedIn, (req, res) => {
 });
 
 
+
+
 router.get("/google", async (req,res) => {
   const {code} = req.query
   console.log({code})
