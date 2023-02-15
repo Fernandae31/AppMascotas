@@ -62,7 +62,7 @@ router.post("/signup", isLoggedOut, (req, res) => {
     .then((salt) => bcrypt.hash(password, salt))
     .then((hashedPassword) => {
       // Create a user and save it in the database
-      return User.create({ name, email, password: hashedPassword, phone, address });
+      return User.create({ name, email, password: hashedPassword, phone, address, birthDay });
     })
     .then((user) => {
       res.redirect("/auth/login");

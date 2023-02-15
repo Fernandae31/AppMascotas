@@ -14,57 +14,56 @@
                 </nav>
             </div>
         </header>
-     {{#if userInSession}}
+     {{#if user}}
      <!-- Barra Lateral -->
-    <div class="sidenav">
-        <div class="profile">
-            <div>
-            <img src="{{userInSession.photo}}" alt="" width="100" height="100">
-            </div>
-            <div class="name">
-                <p>{{userInSession.name}}</p> 
-            </div>  
-                <a href="/user/profile/{{userInSession._id}}/edit">
-                    <button> Edit Profile</button> 
-                </a>
-            </div>  
+     <form action="/user/profile/{{user._id}}/edit" method="post">
+            <div class="sidenav">
+            <div class="profile">
+                <div>
+                <img src="{{user.photo}}" alt="" width="100" height="100">
+                </div>
+                <div class="name">
+                    <p>{{user.name}}</p> 
+                    </div>  
+                    <button type="submit"> Save</button> 
+                </div>  
 
-        </div>
-     </div>
-   
-
-
-    <!-- MainProfile -->
-    <div class="mainProfile">
-        <h2>Profile</h2>
-        <div class="card">
-            <div class="card-body">
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>Email:</td>
-                            <td></td>
-                            <td>{{userInSession.email}}</td>
-                        </tr>
-                        <tr>
-                            <td>Address:</td>
-                            <td></td>
-                            <td>{{userInSession.address}}</td>
-                        </tr>
-                        <tr>
-                            <td>Birth Day:</td>
-                            <td></td>
-                            <td>{{userInSession.birthDay}}</td>
-                        </tr>
-                        <tr>
-                            <td>Phone:</td>
-                            <td></td>
-                            <td>{{userInSession.phone}}</td>
-                        </tr>
-                    </tbody>
-                </table>
             </div>
         </div>
-      {{/if}}
-    </div>
+
+        <!-- MainProfile -->
+        <div class="mainProfile">
+            <h2>Profile</h2>
+            <div class="card">
+                <div class="card-body">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Email:</td>
+                                <td></td>
+                                <td><input type="email" name="email" value="{{user.email}}"></td>
+                            </tr>
+                            <tr>
+                                <td>Address:</td>
+                                <td></td>
+                                <td><input type="text" name="address" value="{{user.address}}"></td>
+                            </tr>
+                            <tr>
+                                <td>Birth Day:</td>
+                                <td></td>
+                                <td><input type="date" name="birthDay" value="{{user.birthDay}}"></td>
+                            </tr>
+                            <tr>
+                                <td>Phone:</td>
+                                <td></td>
+                                <td><input type="text" name="phone" value="{{user.phone}}"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        {{/if}}
+        </div>
+     </form>
+    
 </div>

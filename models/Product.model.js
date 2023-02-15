@@ -18,22 +18,16 @@ const productSchema = new Schema(
       type: Number,
       required:true,
     },
-    keyNumber: {
-      type: String,
-      required: true
-    },
     photo: {
-        type: [String]
+        type: String
     },
-
     category: {
       type:String,
-      enum:["food", "toys", "accesories", "transportation"]
+      enum:["Food", "Toys", "Accesories", "Transportation"]
     },
-
     target: {
       type:String,
-      enum:["dog", "cat", "both"]
+      enum:["Dog", "Cat", "Both"]
     }
   },
 
