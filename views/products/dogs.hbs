@@ -132,7 +132,9 @@
               </a>
               {{/if}}
 
-
+              <a class="btnHome" href="/">
+                <strong>Home</strong>
+              </a>
           </nav>
 
 
@@ -143,91 +145,26 @@
       <div class="col-lg-6 col-md-8 mx-auto">
         <h1 class="fw-light">Products for Dogs</h1>
         <p class="lead text-muted">Dog Food and Supplies</p>
-        <p>
-          <a href="#" class="btn btn-secondary my-2">Add Product</a>
-        </p>
       </div>
     </div>
   </section>
 
-  <div class="album py-5 bg-light">
-    <div class="container">
-      
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        <div class="col">
-          <div class="card shadow-sm">
-            <img name="photo" src="" alt="perro">
-            <div class="card-body">
-              <p class="card-text" name="name">Hill's Science Diet Adult Chicken Recipe Dry Cat Food.</p>
-              <p class="card-text"name="price"> <strong> Price:</strong> $100</p>
-              <p class="card-text" name="description"> <strong>Description:</strong>  Provides delicious, breakthrough weight management nutrition .</p>
-              <p class="card-text" name="category"><strong>Category: </strong> Food.</p>
-              <p class="card-text"><strong>Quantity: </strong> <input type="number"; name="quantity"; min="1"; max="5"; size="5px"></p>
-{{!--  --}}
-
-
-{{!--  --}}
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Add to cart</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src="https://assets.petco.com/petco/image/upload/c_pad,dpr_1.0,f_auto,q_auto,h_636,w_636/c_pad,h_636,w_636/l_bypetco-badge,fl_relative,w_0.20,g_south_east,e_sharpen/2668821-center-1" alt="">
-            <div class="card-body">
-              <p class="card-text">WholeHearted Grain Free Chicken Formula Dry Cat Food, 12 lbs. </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                </div>
-                <small class="text-muted">Food</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src="https://assets.petco.com/petco/image/upload/c_pad,dpr_1.0,f_auto,q_auto,h_636,w_636/c_pad,h_636,w_636/l_sale-badge,fl_relative,w_0.12,g_north_west,e_sharpen/2536132-center-1" alt="">
-            <div class="card-body">
-              <p class="card-text">Iams Weight Control & Hairball Care Chicken & Turkey , 22 lbs..</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                </div>
-                <small class="text-muted">Food</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">Food</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        
-
-
+  <div class="cardProducts">
+    {{#each product}}
+    <div class="card" style="width: 18rem;">
+      <img src="{{photo}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{name}}</h5>
+        <p class="card-text">{{description}}</p>
+        <p class="card-text">{{quantity}}</p>
+        <a href="#" class="btn btn-primary">Add to cart</a>
       </div>
     </div>
+    {{/each}}
   </div>
+
+
+
 </main>
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
     
