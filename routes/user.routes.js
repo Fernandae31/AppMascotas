@@ -1,8 +1,15 @@
 const express = require("express");
 const router = express.Router();
 const axios = require('axios');
+// const isAdmin = require('../middleware/isAdmin')
 
-
+function isAdmin (currentUser) {
+  if(currentUser.role === "admin") {
+      return true
+  } else {
+      return false
+  }
+}
 
 // API Google
 const { google } = require("googleapis")
@@ -26,12 +33,13 @@ const User = require("../models/User.model");
 const isLoggedOut = require("../middleware/isLoggedOut");
 const isLoggedIn = require("../middleware/isLoggedIn");
 
-router.get("/profile/:id", isLoggedIn, (req, res) => {
+router.get("/profile/:id", isLoggedIn, (req, res, next) => {
     const { id } = req.params
     console.log(id)
-    User.findById(id)
+    User
+    .findById(id)
     .then(data => {
-      res.render("user/profile", { userInSession: data } );
+      res.render("user/profile", { userInSession: data, admin:isAdmin(req.session.currentUser)});
     })
     .catch(err => next(err))
   });

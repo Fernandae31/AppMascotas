@@ -1,10 +1,10 @@
-module.exports = (req, res, next) => {
+module.exports = (req, res) => {
     //el role viene en req.session.role
     console.log(req.session)
     if (req.session.currentUser.role === "admin") {
-        next()
-        return
+        return true
+    } else {
+        return false
     }
 
-    return res.redirect("/")
 }

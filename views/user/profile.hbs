@@ -69,27 +69,26 @@
               </a>
           </nav>
 
-     {{#if userInSession}}
-     <!-- Barra Lateral -->
-    <div class="sidenav">
-        <div class="profile">
+        {{#if userInSession}}
+        <!-- Barra Lateral -->
+        <div class="sidenav">
+          <div class="profile">
             <div>
-            <img src="{{userInSession.photo}}" alt="" width="100" height="100">
+              <img src="{{userInSession.photo}}" alt="" width="100" height="100">
             </div>
             <div class="name">
                 <p>{{userInSession.name}}</p> 
             </div>  
-                <a href="/user/profile/{{userInSession._id}}/edit" >
+              
+                <a class="btnEditProfile" href="/user/profile/{{userInSession._id}}/edit" >
                     <button class="btn btn-secondary my-2"> Edit Profile</button> 
                 </a>
+                {{#if admin}}
                  <p>
                   <a href="/products/newProduct" class="btn btn-secondary my-2">Add Product</a>
                 </p>
-                
-
-            </div> 
-
-
+                {{/if}}
+          </div>
         </div>
      </div>
    

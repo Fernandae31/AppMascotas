@@ -14,8 +14,12 @@
     padding-top: 20px;
     position: absolute;
     width: 250px;
+    
 }
 
+.btnEditProfile{
+    text-decoration: none;
+}
 /* MainProfile */
 
 .profile {

@@ -39,7 +39,6 @@ router.get("/dogs", (req, res, next) => {
 })
 
 
-
 router.get("/dogs", (req, res) => {
     res.render("products/dogs")
 })
