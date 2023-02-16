@@ -16,17 +16,12 @@ router.get("/cats", (req, res, next) => {
     Product
     .find({target:"Cat"})
     .then((Product) => {
+        if ( req.session.currentUser) {
         res.render("products/cats", {product: Product, admin:isAdmin(req.session.currentUser)})
-    })
-    .catch(err => next(err))
-})
-
-router.get("/cats", isLoggedOut,(req, res, next) => {
-    Product
-    .find({target:"Cat"})
-    .then((Product) => {
-        res.render("products/cats", {product: Product})
-    })
+        } else {
+            res.render("products/cats", {product: Product})
+        }
+    }) 
     .catch(err => next(err))
 })
 
@@ -34,7 +29,11 @@ router.get("/dogs", (req, res, next) => {
     Product
     .find({target:"Dog"})
     .then((Product) => {
-        res.render("products/dogs", {product: Product, admin:isAdmin(req.session.currentUser)})
+        if (req.session.currentUser) {
+            res.render("products/dogs", {product: Product, admin:isAdmin(req.session.currentUser)})
+        } else {
+            res.render("products/dogs", {product:Product})
+        }
     })
     .catch(err => next(err))
 })
