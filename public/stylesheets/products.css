@@ -1,0 +1,11 @@
+.cardProducts{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/* .contenedorTarjetas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+} */
